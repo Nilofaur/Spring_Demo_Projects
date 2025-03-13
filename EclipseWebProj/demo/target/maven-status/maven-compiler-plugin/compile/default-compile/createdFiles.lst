@@ -1,0 +1,8 @@
+com\eclipse\web\demo\Controller\DetailsController.class
+com\eclipse\web\demo\Model\Details.class
+com\eclipse\web\demo\Service\ItemsService.class
+com\eclipse\web\demo\Service\DetailsService.class
+com\eclipse\web\demo\Model\Payment.class
+com\eclipse\web\demo\Controller\HomeController.class
+com\eclipse\web\demo\Model\Items.class
+com\eclipse\web\demo\DemoApplication.class

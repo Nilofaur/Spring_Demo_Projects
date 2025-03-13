@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Items</h1>
+        <ul>
+            <!-- Iterate over items and display them -->
+            <th:block th:each="item : ${items}">
+                <li th:text="${item}"></li>
+            </th:block>
+        </ul>
+		
+		<!-- Display Entered Search Data -->
+		        <h2>User Input:</h2>
+		        <p>Entered Item: 
+		            <strong th:text="${search != null ? search : 'No input provided'}">Searched Item</strong>
+		        </p>
+		<!-- Display Predefined Amount -->
+		      <h2>Predefined Data:</h2>
+		      <p>Amount: <strong th:text="${amt}">100</strong></p>
+
+        <h2>Payment Methods</h2>
+        <ul>
+            <!-- Iterate over PaymentTypes and display them -->
+            <th:block th:each="payment : ${PaymentTypes}">
+                <li th:text="${payment.paymentMethod}"></li>
+            </th:block>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success: Payment Done</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: green;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Success: Payment Done</h1>
+
+    <h2>Order Details</h2>
+	<p>Order No: <strong th:text="${OrderNo}">[OrderNo Placeholder]</strong></p>
+
+	
+	
+			     
+
+    <h2>Payment Details</h2>
+    <table>
+        <thead>
+      
+        </thead>
+        <tbody>
+            
+				
+				<h2>Payment Methods</h2>
+				       <ul>
+				           <!-- Iterate over PaymentTypes and display them -->
+				           <th:block th:each="payment : ${payment}">
+				               <li th:text="${payment.paymentMethod}"></li>
+				           </th:block>
+				       </ul>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Items List</h2>
+    <ul>
+        <li th:each="item : ${items}" th:text="${item}"></li>
+    </ul>
+
+    <h2>Searched Item</h2>
+    <p><strong>Searched Item:</strong> <span th:text="${search}"></span></p>
+</body>
+</html>
